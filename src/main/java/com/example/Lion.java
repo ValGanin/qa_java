@@ -20,8 +20,7 @@ public class Lion {
 
 
     public int getKittens() {
-        feline.getKittens();
-        return 0;
+        return feline.getKittens();
     }
 
     public boolean doesHaveMane() {

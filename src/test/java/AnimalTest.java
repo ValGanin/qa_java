@@ -1,12 +1,11 @@
 import com.example.Animal;
 import java.util.List;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AnimalTest {
 
@@ -23,7 +22,7 @@ public class AnimalTest {
     @MethodSource("typeProvider")
     @DisplayName("Get food test")
     public void getFoodTest(String food, List<String> menu) throws Exception {
-        Assertions.assertEquals(menu, animal.getFood(food));
+        assertEquals(menu, animal.getFood(food));
     }
 
     @Test
@@ -35,6 +34,6 @@ public class AnimalTest {
     @Test
     @DisplayName("Get family test")
     void getFamilyTest() {
-        Assertions.assertEquals("Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи", animal.getFamily());
+        assertEquals("Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи", animal.getFamily());
     }
 }
